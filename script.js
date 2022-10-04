@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(response => {
         console.log(response);
         if (response.shortUrl) {
-          info.innerHTML = `Your shortened address for <a href="${response.originalUrl}">${response.originalUrl}</a> is 
+          info.innerHTML = `Your shortened address for <a href="${response.originalUrl}" target="_blank">${response.originalUrl}</a> is 
           <a href="${BASE_URL}${response.shortUrl}" target="_blank" title="shortened address">${BASE_URL}${response.shortUrl}</a> and it is valid till ${new Date(response.expirationDate)}`;          
         } else {
           info.innerHTML = wrong

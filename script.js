@@ -15,10 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function getUniqueString(addressToShorten) {
     const options = { 
-      method: 'POST', body: `'{"url": "${addressToShorten}"}'`,
-      headers : { 
-        'Content-type' : 'application/json'
-      }
+      method: 'POST', body: `'{"url": "${addressToShorten}"}'`
     };
 
     fetch(BASE_URL + 'generate', options)

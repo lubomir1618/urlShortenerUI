@@ -1,3 +1,5 @@
+
+
 // ui shortener
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -15,7 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function getUniqueString(addressToShorten) {
     const options = { 
-      method: 'POST', body: `'{"url": "${addressToShorten}"}'`
+      method: 'POST',
+      body: `{"url": "${addressToShorten}"}`,
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
     };
 
     fetch(BASE_URL + 'generate', options)

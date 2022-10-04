@@ -1,5 +1,3 @@
-
-
 // ui shortener
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -12,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
   shorten.addEventListener('click', () => {
     if (isValidUrl(address.value)) {
       getUniqueString(address.value);
+    } else {
+      info.innerHTML = 'Please add valid address.'
     }
   });
 
@@ -48,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
       new URL(address);
       return true;
     } catch (err) {
-      info.innerHTML = 'Please add valid address.'
       return false;
     }
   }

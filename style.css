@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  position: relative;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  list-style: none;
+  background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+}
+
+h1 {
+  color: #222222;
+}
+
+h2 {
+  color: #313030;
+}
+
+#form {
+  position: relative;  
+  top: 50px;
+  margin: 0 auto;
+  width: 700px;
+  text-align: center;
+  z-index: 2;
+  font-family: sans-serif;
+}
+
+#title {
+  width: 100%;
+  padding: 25px;
+  font-size: 33px;  
+  color: #222222;
+}
+
+#address {
+  width: 450px;
+  height: 40px;
+  background-image: linear-gradient(to right top, #ccd4df, #b8c1c5, #bbcdcd, #becac3, #e1eccc);
+  border-radius: 18px ;
+  border: 2px solid #86A8E7;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 15px;
+  color: #4d5052;
+  transition: box-shadow .7s;
+}
+
+#address:hover {
+  box-shadow: 0 0 0 3px #fff, 0 0 5px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow .7s;
+}
+
+#shorten {
+  width: 150px;
+  height: 40px;
+  background-color: #D16BA5;
+  border: 1px solid #c35694;
+  border-radius: 18px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: box-shadow .7s;
+}
+
+#shorten:hover {
+  box-shadow: 0 0 0 3px #fff, 0 0 5px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow .7s;
+}
+
+#info {
+  font-size: 20px;
+  color: #403e3e;
+}
+
+#info p {
+  font-size: 11px;
+  color: #5d5959;
+  margin-top: 10px;
+}
+
+#info a {
+  text-decoration: none;
+  color: #406FC1;
+  font-size: 22px;
+}
+
+#info a:hover {
+  color: #D16BA5;
+  transition: color .2s ease-out;
+}
+
+#loading {
+  position: relative;
+  margin: 0 auto;
+  width: 250px;
+  height: 237px;
+  background: url('img/dog-sprite.png');
+  animation: loading 3s steps(6) infinite;
+  display: none;
+}
+
+#loading::after {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  text-align: center;
+  content: 'loading';
+  font-family: sans-serif;
+  color: #454343;
+  transform: translate3d(-50%, 0, 0);
+}
+
+@keyframes loading {
+  0% {
+    filter: opacity(0.2);
+    background-position: 0 0;
+  }
+  50% {
+    filter: opacity(1);
+  }
+  100% {
+    filter: opacity(0.2);
+    background-position: -1500px  0;
+  }
+}
+
+#dog1 {
+  position: absolute;
+  left: 10px;
+  bottom: 0px;
+  height: 400px;
+}
+
+#dog2 {
+  position: absolute;
+  right: 30px;
+  bottom: -30px;
+  height: 400px;
+}
+
+
